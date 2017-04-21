@@ -2,7 +2,7 @@
 
 
 //set the map and initial coordinates
-var mymap = L.map('bikemap').setView([0, 0], 1);
+var mymap = L.map('bikemap').setView([57.3, 42.3], 1);
 
 //set the initial tilelayer
 //I've used ESRI but there are loads of others here https://leaflet-extras.github.io/leaflet-providers/preview/
@@ -23,37 +23,6 @@ var OpenTopoMap = L.tileLayer('http://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
 
 //OpenTopoMap.addTo(mymap);
 
-//when the button on is clicked
-$('#shakey').click(function() {
-    console.log("getting quakes");
-    //use the jquery get json method to retrieve our json
-    $.getJSON("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson", function(result) {
-        //response data is now in the result variable
-        //uncomment the line below to see the raw json, this would let you see the structure of the response
-        //console.log(result)
-        //I know that the earthquakes are defined in an array (or list) result.features
-        result.features.forEach(function(quake) {
-          //for each earthquake
-          //get its coordinates
-          var lng = quake.geometry.coordinates[0];
-          var lat = quake.geometry.coordinates[1];
-          //and it magnitude
-          var mag = quake.properties.mag * 50;
-          //for each earthquake create a circle
-            var circle = L.circle([lat, lng], {
-                color: 'red',
-                fillColor: '#f03',
-                fillOpacity: 0.5,
-                radius: mag
-            })
-            //and add it to the map
-            circle.addTo(mymap);
 
-        });
-
-    });
-    $.getJSON("http://www.kuakes.com/json/?callback=?", function(result) {
-      console.log(result);
-    });
 
 });

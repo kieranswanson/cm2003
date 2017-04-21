@@ -15,7 +15,7 @@ body {
   overflow-x: hidden;
   width: 100%;
   height: 100%;
-  
+
 }
 .offcanvas #outline {
   overflow: hidden;
@@ -52,7 +52,7 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #000;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  
+
 }
 
 ::-webkit-selection {
@@ -362,10 +362,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 
 /*Application Map and Routes Start*/
-.map {
-  width: 80%;
-  margin: 0 auto;
-}
+#bikemap { height: 400px; }
 
 .route-guide {
   margin-top: 5em;
@@ -731,5 +728,3 @@ h1, h2, h3, h4, h5, h6, figure {
 
 
 /*# sourceMappingURL=style.css.map */
-
-
