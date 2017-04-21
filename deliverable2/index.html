@@ -6,8 +6,13 @@
 	<title>CM2003 BIKER APPLICATION</title>
 
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
-	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+
+	<!--vendor scripts-->
+	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+	<!-- Leaflet Script -->
+	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
 
 	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="css/bootstrap.css">
@@ -76,23 +81,10 @@
 			</div>
 			<div class="row">
 				<div class="columm-md-6">
-					<div class="map"></div>
-
-				  <script>
-
-				  // initialize the map
-				  var map = L.map('map').setView([57.1497, 2.0943], 9);
-
-
-				  // load a tile layer
-				  L.tileLayer('http://tiles.mapc.org/basemap/{z}/{x}/{y}.png',
-				    {
-				      attribution: 'Tiles by <a href="http://mapc.org">MAPC</a>, Data by <a href="http://mass.gov/mgis">MassGIS</a>',
-				      maxZoom: 17,
-				      minZoom: 9
-				    }).addTo(map);
-
-				  </script>
+					<article>
+						<!-- my map -->
+						<div id="bikemap"></div>
+					</article>
 
 				</div>
 				<div class="columm-md-6">
