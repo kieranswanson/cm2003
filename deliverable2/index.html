@@ -4,23 +4,23 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>CM2003 BIKER APPLICATION</title>
-	
+
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-	
-	
+
+
 	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="css/bootstrap.css">
-	
+
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
 
 	 <!-- Tab Image Logo-->
      <link rel="shortcut icon" href="images/LOGO_BIKE.ico"/>
-   
+
 
 	</head>
 	<body>
-		
+
 	<div id="outline">
 	<nav class="nav-app" role="navigation">
 		<div class="top-menu">
@@ -31,16 +31,16 @@
 					</div>
 					<div class="columm-xs-10 text-right menu-1">
 						<ul>
-							
-							<li class="nav-circle"><a href="#topmenu"><span>HOME</span></a></li>
+
+
 							<li class="nav-circle"><a href="#our-app"><span>OUR APP</span></a></li>
                             <li class="nav-circle"><a href="#app-account"><span>MY ACCOUNT</span></a></li>
 							<li class="nav-circle"><a href="#contact-app"><span>CONTACT</span></a></li>
 						</ul>
 					</div>
 				</div>
-                
-				
+
+
 			</div>
 		</div>
 	</nav>
@@ -75,11 +75,24 @@
 			</div>
 			<div class="row">
 				<div class="columm-md-6">
-					<div class="map">
-                    
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d69255.96664306027!2d-2.12502765!3d57.14990124999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2suk!4v1489490787590" width="550" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                  
-					</div>
+					<div id="map"></div>
+
+				  <script>
+
+				  // initialize the map
+				  var map = L.map('map').setView([57.1497, 2.0943], 9);
+
+
+				  // load a tile layer
+				  L.tileLayer('http://tiles.mapc.org/basemap/{z}/{x}/{y}.png',
+				    {
+				      attribution: 'Tiles by <a href="http://mapc.org">MAPC</a>, Data by <a href="http://mass.gov/mgis">MassGIS</a>',
+				      maxZoom: 17,
+				      minZoom: 9
+				    }).addTo(map);
+
+				  </script>
+					
 				</div>
 				<div class="columm-md-6">
 					<div class="row route-guide">
@@ -89,39 +102,39 @@
 								<h5>Route Name:- David Welsh Winter Garden to Robert Gordon University<br>
                                 Cycle Level:- Easy<br>
                                 Distance:- 2.2 miles<br>
-                                Route Time: 12 minutes Approx 
+                                Route Time: 12 minutes Approx
                                 </h5>
-                                
+
                              	<br>
                                	<a href="/" class="select-btn">Select Route</a>
-                        
+
                                 <h3>Route 2- Aberdeen Old Railway Path</h3>
 								<h5>Route Name:- David Welsh Winter Garden to Drum Castle Estate<br>
                                 Cycle Level:- Diffcult<br>
                                 Distance:- 10.7 miles<br>
                                 Route Time: 52 minutes Approx
                                 </h5>
-                                
+
                                 <br>
                                	<a href="/" class="select-btn">Select Route</a>
 
 							</div>
 						</div>
-						
-					
+
+
 					</div>
 				</div>
 			</div>
 		</div>
 	</div><!--Main Appliction Section End-->
-	
-    
+
+
     <div id="app-account" class="app-background">
 		<div class="container">
 			<div class="row">
 				<div class="columm-md-8 columm-md-offset-2 text-center app-section-heading">
 					<h2>My Profile Area</h2>
-                    
+
 				</div>
 			</div>
 			<div class="row">
@@ -134,48 +147,48 @@
 									</figure>
 									<h3>Jack Small</h3>
                                    <h4> My Stats</h4>
-                                   
-                                    
+
+
                                     <div class="columm-md-4 gallery-app-widget">
 		 							<h3>Distance</h3> <p>2.2 miles</p>
 									</div>
-                
+
                						<div class="columm-md-4 gallery-app-widget">
 		 							<h3>Time</h3> <p>12 min</p>
 									</div>
-                					
+
                                     <div class="columm-md-4 gallery-app-widget">
 		 							<h3>Calouries</h3> <p>1500 Cal</p>
 									</div>
-                                
-                                 	
+
+
 								</div>
 							</div>
-							
-							
-						
+
+
+
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-    
-    
-    
-    
+
+
+
+
 <div id="contact-app" class="app-background" >
 		<div class="container">
         <div class="overlay"></div>
         <div class="row">
 				<div class="columm-md-8 columm-md-offset-2 text-center app-section-heading-contact ">
 					<h2>Contact Us</h2>
-					
+
 				</div>
 			</div>
 			<div class="row">
 				<div class="columm-md-5">
-					
+
 					<div class="app-contact-info">
 						<h3>Contact Information</h3>
 						<p>
@@ -224,10 +237,10 @@
 							<input type="submit" value="Send Message" class="main-btn">
 						</div>
 
-					</form>		
+					</form>
 				</div>
 			</div>
-			
+
 		</div>
 	</div>
 
@@ -250,10 +263,10 @@
          <img src="images/beach.jpg" alt="beach" width="60" height="60">
         <img src="images/drum.jpg" alt="beach" width="60" height="60">
 		<img src="images/beach.jpg" alt="beach" width="60" height="60">
-        <img src="images/drum.jpg" alt="beach" width="60" height="60">			 
+        <img src="images/drum.jpg" alt="beach" width="60" height="60">
 				</div>
 			</div>
-            
+
             <div class="item">
 				<div class="columm-md-4 gallery-app-widget">
                 <h3> Twitter Feed </h3>
@@ -266,10 +279,10 @@
          <img src="images/beach.jpg" alt="beach" width="60" height="60">
         <img src="images/drum.jpg" alt="beach" width="60" height="60">
 		<img src="images/beach.jpg" alt="beach" width="60" height="60">
-        <img src="images/drum.jpg" alt="beach" width="60" height="60">			 
+        <img src="images/drum.jpg" alt="beach" width="60" height="60">
 				</div>
 			</div>
-            
+
             <div class="item">
 				<div class="columm-md-4 gallery-app-widget">
                 <h3> Facebook Feed </h3>
@@ -282,18 +295,18 @@
          <img src="images/beach.jpg" alt="beach" width="60" height="60">
         <img src="images/drum.jpg" alt="beach" width="60" height="60">
 		<img src="images/beach.jpg" alt="beach" width="60" height="60">
-        <img src="images/drum.jpg" alt="beach" width="60" height="60">			 
+        <img src="images/drum.jpg" alt="beach" width="60" height="60">
 				</div>
 			</div>
-            
-           
+
+
 			</div>
 
 
 			<div class="row copyright">
 				<div class="columm-md-12 text-center">
 					<h4> <strong>BIKER APP </strong></h4>
-					
+
 				</div>
 			</div>
 
@@ -301,16 +314,15 @@
 	</footer>
 	</div><!--Footer Section End-->
 
-	
-	
-	
+
+
+
 	<!-- jQuery Easing -->
 	<script src="js/jquery.easing.1.3.js"></script>
-	
+
 
 	<!-- Main -->
 	<script src="js/main.js"></script>
 
 	</body>
 </html>
-
