@@ -87,6 +87,37 @@
 						<div id="bikemap"></div>
 					</article>
 
+<script src='js/mapbox-gl.js'></script>
+    <link href='css/mapboxgl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+    
+<script src='js/mapbox.js'></script>
+<link rel='stylesheet' href='css/directions.css' />
+<div id='map'></div>
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoia2llcmFuc3dhbnNvbiIsImEiOiJjajF6ajl2MnAwMDFoMnduNnc1dTN1cHcwIn0.HqWf4y1LVOWE-3YSCBqbFA';
+
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/kieranswanson/cj1zjkso7002a2skhxynbgatk',
+    center: [57.171,-2.109],
+    zoom: 9
+});
+
+map.addControl(new MapboxDirections({
+    accessToken: mapboxgl.accessToken
+}), 'top-left');
+</script>
+
+</body>
+</html>
+
+
+
 				</div>
 				<div class="columm-md-6">
 					<div class="row route-guide">
@@ -316,7 +347,12 @@
 
 
 	<!-- Main -->
-	<script src="js/main.js"></script>
+	<!--<script src="js/main.js"></script>-->
 
+
+
+
+    
+    
 	</body>
 </html>
